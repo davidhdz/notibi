@@ -1,0 +1,118 @@
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+# Copyright 2014 David Hernández
+#
+# NotiBi
+# 
+# NotiBi is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+# 
+# NotiBi is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License
+# along with NotiBi. If not, see <http://www.gnu.org/licenses/>.
+
+import os
+import sys
+import random
+import csv
+from os import listdir
+from os.path import isfile, join
+import time
+import optparse
+import pynotify
+
+
+###################################################################
+"""
+Variables de configuración
+nombre_a: Ubicación del archivo de texto
+dir_icos: Ubicación del directorio de iconos
+tiempo:   Segundos que transcurren entre cada notificación
+"""
+
+nombre_a = os.path.join(os.path.abspath(os.path.dirname(sys.argv[0])),'/usr/share/notibi/data/citas.csv')
+dir_icos = os.path.join(os.path.dirname(os.path.abspath(__file__)), '/usr/share/notibi/iconos/')
+tiempo = 9000  # 9000 segundos = 2.5 horas
+####################################################################
+
+
+def notify(titulo, msg, icono):
+    pynotify.init("NotiBi")
+    nota = pynotify.Notification(titulo, msg, icono)
+    nota.set_timeout(5)
+    try:
+        nota.show()
+    except Exception as e:
+        print(e)
+
+
+def main():
+
+    global tiempo
+    global nombre_a
+    global dir_icos
+
+    parser = optparse.OptionParser(
+        usage='Usage: %prog [-t segundos] [-m /ruta/archivo.csv] '
+        '[-g /ruta/directorio_iconos]', version='%prog Version 0.1 by '
+        'David Hernandez 2014', add_help_option=False)
+
+    parser.add_option('-h', '--help', help='muestra este mensaje de ayuda',
+                       dest='ayuda', action='store_true')
+    parser.add_option('-t', help='tiempo en segundos entre cada notificación ',
+                      dest='tiempo', type='int', default=tiempo, action='store',
+                      metavar='segundos')
+    parser.add_option('-m', help='ubicación y nombre del archivo de mensajes '
+                      'formato csv', dest='mensajes', default=nombre_a,
+                      metavar='archivo')
+    parser.add_option('-g', help='ubicación y nombre de la carpeta de iconos',
+                      dest='iconos', default=dir_icos, metavar='directorio')
+
+    (opts, args) = parser.parse_args()
+
+    if opts.ayuda is True:
+        parser.print_help()
+        sys.exit()
+    elif opts.tiempo:
+        tiempo = opts.tiempo
+    elif opts.mensajes:
+        nombre_a = opts.mensajes
+    elif opts.iconos:
+        dir_icos = os.path.join(os.path.abspath(opts.iconos), '/')
+
+    with open(nombre_a, 'Ur') as f:
+        data = list(tuple(rec) for rec in csv.reader(f, delimiter='\n'))
+        rows = list(data)
+
+    iconos = [f for f in listdir(dir_icos) if isfile(join(dir_icos, f))]
+
+    while(True):
+        index = random.randint(0, len(rows) - 1)
+        if index % 2 != 0:
+            index = index - 1
+
+        titulo = ''.join(data[index])
+        texto = ''.join(data[index + 1])
+        nom_ico = iconos[random.randint(0, len(iconos) - 1)]
+        icono = dir_icos + nom_ico
+
+        notify(titulo, texto, icono)
+
+        time.sleep(tiempo)
+
+
+if __name__ == "__main__":
+
+    try:
+        while(True):
+            main()
+    except (KeyboardInterrupt, SystemExit):
+       print('\n')
+

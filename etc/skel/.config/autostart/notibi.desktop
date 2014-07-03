@@ -1,0 +1,12 @@
+[Desktop Entry]
+Categories=Misc;
+Exec=/bin/sh -c 'sleep 45 && /usr/bin/notibi'
+GenericName=NotiBi
+Icon=/usr/share/notibi/iconos/icon15.png
+Name=Notificaciones Bicentenarias
+Comment=Notificaciones Bicentenarias
+Terminal=false
+Type=Application
+Version=0.1
+X-GNOME-Autostart-enabled=true
+X-KDE-autostart-after=panel

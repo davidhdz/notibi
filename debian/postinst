@@ -1,0 +1,29 @@
+#!/bin/sh -e
+
+set -e
+
+PKG=notibi
+    if [ "$1" = configure ] ; then
+    	for usuario in  /home/*? ; do 
+            usuario_min=$(basename $usuario)
+            case $(grep "${usuario_min}:.*:.*:.*:.*:.*:::" /etc/shadow ) in
+                '')
+                #no se hace nada
+                ;;
+                *)
+                usuario=${usuario_min}
+                if [ -f  /home/${usuario}/.config/autostart/notibi.desktop ];
+                then
+                    cp -r /etc/skel/.config/autostart/notibi.desktop /home/${usuario}/.config/autostart/notibi.desktop
+                    chown ${usuario}.${usuario} /home/${usuario}/.config/autostart/notibi.desktop
+                else
+                    mkdir -p  /home/${usuario}/.config; chown -R ${usuario}.${usuario} /home/${usuario}/.config
+                    mkdir -p /home/${usuario}/.config/autostart; chown -R ${usuario}.${usuario} /home/${usuario}/.config/autostart
+                    cp -r /etc/skel/.config/autostart/notibi.desktop /home/${usuario}/.config/autostart/notibi.desktop
+                    chown ${usuario}.${usuario} /home/${usuario}/.config/autostart/notibi.desktop
+                fi
+            esac
+        done
+    fi
+       
+exit 0

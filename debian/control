@@ -1,0 +1,15 @@
+Source: notibi
+Section: misc
+Priority: optional
+Maintainer: David Hernández <david.vzla@gmail.com>
+Build-Depends: debhelper (>= 8.0.0)
+Standards-Version: 3.9.4
+Homepage: http://bicentenario.cenditel.gob.ve
+
+Package: notibi
+Architecture: all
+Depends: ${misc:Depends}, python, python-notify
+Description: Sistema de notificaciones bicentenarias.
+ Sistema de notificaciones con mensajes alusivos a la campaña bicentenaria de
+ Venezuela. Realizado para la Fundación Centro Nacional de Desarrollo e
+ Investigaciones en Tecnologías Libres (CENDITEL).
