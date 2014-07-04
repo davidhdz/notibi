@@ -3,21 +3,10 @@ NotiBi
 Sistema de Notificaciones Bicentenarias.
 
 ----
+
 <br>
 
-|Tabla de Contenidos|
-|-------------------|
-|[Sinopsis](#sinopsis)|
-|[Requisitos](#requisistos)|
-|[Uso](#uso)|
-|[Compatibilidad](#compatibilidad)|
-|[Descargas](#descargas)|
-|[Capturas](#capturas)|
-|[Información](#informacion)|
-
-<br><br>
-
-Sinopsis {#sinopsis}
+Sinopsis
 --------
 Sistema de notificaciones con mensajes alusivos a la campaña bicentenaria de Venezuela. Realizado para la Fundación Centro Nacional de Desarrollo e Investigaciones en Tecnologías Libres.
 <br><br>
@@ -26,7 +15,7 @@ NotiBi es un sistema que despliega en pantalla mensajes con contenidos que relat
 NotiBi está hecho en python y despliega los mensajes a través del sistema de notificaciones de `gnome (>= 3.x)`. 
 
 
-Requisitos {#requisitos}
+Requisitos
 ----------
 NotiBi requiere los siguientes paquetes:
 
@@ -34,7 +23,7 @@ NotiBi requiere los siguientes paquetes:
  * `python-notify >= 0.1.1`
 
 
-Uso {#uso}
+Uso
 ---
     notibi [-t segundos] [-m /ruta/archivo.csv] [-g /ruta/directorio_iconos]
 
@@ -46,7 +35,7 @@ Uso {#uso}
       -g directorio  establece la ubicación y nombre de la carpeta de iconos
 
 
-Compatibilidad {#compatibilidad}
+Compatibilidad
 --------------
 Probado en distribuciones con entorno Gnome 3
  * Debian Wheezy
@@ -57,11 +46,11 @@ Probado en distribuciones con entorno Gnome 3
 *Nota: Ubuntu 14.04 despliega los mensajes, pero como el entorno no cuenta con área de notificación, los mensajes no se almacenan en ésta como en otras distribuciones que usan Gnome 3.
 
 
-Descargas {#descargas}
+Descargas
 ---------
 Versión 0.1 para Debian y derivados: [notibi_0.1_all.deb](http://fsl.cenditel.gob.ve/frs/download.php/467/notibi_0.1_all.deb)
 
-Capturas {#capturas}
+Capturas
 --------
 **Despliegue**
 ![Despliegue](screenshots/1.png "Despliegue")
@@ -76,7 +65,7 @@ Capturas {#capturas}
 <br/>
 
 
-Información {#informacion}
+Información
 -----------
 **Proyecto bicentenario**: http://bicentenario.cenditel.gob.ve<br>
 **Repositorio**: http://github.com/davidhdz/notibi<br>
