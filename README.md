@@ -1,6 +1,6 @@
 NotiBi
 ======
-Sistema de **Noti**ficaciones **Bi**centenarias.
+Sistema de Notificaciones Bicentenarias.
 
 ----
 
