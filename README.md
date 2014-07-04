@@ -4,8 +4,6 @@ Sistema de Notificaciones Bicentenarias.
 
 ----
 
-<br>
-
 Sinopsis
 --------
 Sistema de notificaciones con mensajes alusivos a la campaña bicentenaria de Venezuela. Realizado para la Fundación Centro Nacional de Desarrollo e Investigaciones en Tecnologías Libres.
