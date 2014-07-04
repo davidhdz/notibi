@@ -3,9 +3,21 @@ NotiBi
 Sistema de Notificaciones Bicentenarias.
 
 ----
+<br>
 
+|Tabla de Contenidos|
+|-------------------|
+|[Sinopsis](#sinopsis)|
+|[Requisitos](#requisistos)|
+|[Uso](#uso)|
+|[Compatibilidad](#compatibilidad)|
+|[Descargas](#descargas)|
+|[Capturas](#capturas)|
+|[Información](#informacion)|
 
-Sinopsis
+<br><br>
+
+Sinopsis {#sinopsis}
 --------
 Sistema de notificaciones con mensajes alusivos a la campaña bicentenaria de Venezuela. Realizado para la Fundación Centro Nacional de Desarrollo e Investigaciones en Tecnologías Libres.
 <br><br>
@@ -14,7 +26,7 @@ NotiBi es un sistema que despliega en pantalla mensajes con contenidos que relat
 NotiBi está hecho en python y despliega los mensajes a través del sistema de notificaciones de `gnome (>= 3.x)`. 
 
 
-Requisitos
+Requisitos {#requisitos}
 ----------
 NotiBi requiere los siguientes paquetes:
 
@@ -22,7 +34,7 @@ NotiBi requiere los siguientes paquetes:
  * `python-notify >= 0.1.1`
 
 
-Uso
+Uso {#uso}
 ---
     notibi [-t segundos] [-m /ruta/archivo.csv] [-g /ruta/directorio_iconos]
 
@@ -34,7 +46,7 @@ Uso
       -g directorio  establece la ubicación y nombre de la carpeta de iconos
 
 
-Compatibilidad
+Compatibilidad {#compatibilidad}
 --------------
 Probado en distribuciones con entorno Gnome 3
  * Debian Wheezy
@@ -45,7 +57,11 @@ Probado en distribuciones con entorno Gnome 3
 *Nota: Ubuntu 14.04 despliega los mensajes, pero como el entorno no cuenta con área de notificación, los mensajes no se almacenan en ésta como en otras distribuciones que usan Gnome 3.
 
 
-Capturas
+Descargas {#descargas}
+---------
+Versión 0.1 para Debian y derivados: [notibi_0.1_all.deb](http://fsl.cenditel.gob.ve/frs/download.php/467/notibi_0.1_all.deb)
+
+Capturas {#capturas}
 --------
 **Despliegue**
 ![Despliegue](screenshots/1.png "Despliegue")
@@ -60,8 +76,9 @@ Capturas
 <br/>
 
 
-Información
+Información {#informacion}
 -----------
 **Proyecto bicentenario**: http://bicentenario.cenditel.gob.ve<br>
-**Repositorio**: http://github.com/davidhdz/notibi
+**Repositorio**: http://github.com/davidhdz/notibi<br>
+**Repositorio institucional**: http://fsl.cenditel.gob.ve/frs/?group_id=73&release_id=246
 
