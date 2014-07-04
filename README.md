@@ -1,5 +1,9 @@
 NotiBi
 ======
+Sistema de **Noti**ficaciones **Bi**centenarias.
+
+----
+
 
 Sinopsis
 --------
@@ -31,6 +35,31 @@ Uso
       -m archivo     establece la ubicación y nombre del archivo de mensajes formato csv
       -g directorio  establece la ubicación y nombre de la carpeta de iconos
 
+Compatibilidad
+--------------
+Probado en distribuciones con entorno Gnome 3
+ * Debian Wheezy
+ * Caribay 4.0 
+ * Canaima 4.x
+ * Ubuntu 14.04*
+
+*Nota: Ubuntu 14.04 despliega los mensajes, pero como el entorno no cuenta con área de notificación, los mensajes no se almacenan en ésta como en otras distribuciones que usan Gnome 3.
+
+
+
+Capturas
+--------
+![Despliegue](screenshots/1.png "Despliegue")
+
+<br/>
+
+![Área de notificaciones](screenshots/2.png "Área de notificaciones")
+
+<br/>
+
+![Detalle](screenshots/3.png "Detalle")
+
+<br/>
 
 Información
 -----------
