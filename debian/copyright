@@ -2,6 +2,7 @@ Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: notibi
 Source: <http://github.com/davidhdz/notibi>
 
+Files: *
 Copyright: 2014 David Hernandez <david.vzla@gmail.com>
 License: GPL-3.0+
  This program is free software: you can redistribute it and/or modify

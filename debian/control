@@ -3,7 +3,7 @@ Section: misc
 Priority: optional
 Maintainer: David Hernández <david.vzla@gmail.com>
 Build-Depends: debhelper (>= 8.0.0)
-Standards-Version: 3.9.4
+Standards-Version: 3.9.6
 Homepage: http://bicentenario.cenditel.gob.ve
 
 Package: notibi

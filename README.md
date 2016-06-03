@@ -1,4 +1,4 @@
-NotiBi
+﻿NotiBi
 ======
 Sistema de Notificaciones Bicentenarias.
 
@@ -6,7 +6,8 @@ Sistema de Notificaciones Bicentenarias.
 
 Sinopsis
 --------
-Sistema de notificaciones con mensajes alusivos a la campaña bicentenaria de Venezuela. Realizado para la Fundación Centro Nacional de Desarrollo e Investigaciones en Tecnologías Libres.
+Sistema de notificaciones con mensajes alusivos a la campaña bicentenaria de Venezuela. 
+Realizado para la Fundación Centro Nacional de Desarrollo e Investigaciones en Tecnologías Libres.
 <br><br>
 NotiBi es un sistema que despliega en pantalla mensajes con contenidos que relatan de forma resumida acontecimientos sucedidos durante la gesta independentista de Venezuela. 
 <br><br>
@@ -23,30 +24,24 @@ NotiBi requiere los siguientes paquetes:
 
 Uso
 ---
-    notibi [-t segundos] [-m /ruta/archivo.csv] [-g /ruta/directorio_iconos]
+```bash
+  notibi [-t segundos] [-m /ruta/archivo.csv] [-g /ruta/directorio_iconos]
 
-    opciones:
-      --version      muestra el número de versión del programa
-      -h, --help     muestra este mensaje de ayuda
-      -t segundos    establece el tiempo en segundos entre cada notificación
-      -m archivo     establece la ubicación y nombre del archivo de mensajes formato csv
-      -g directorio  establece la ubicación y nombre de la carpeta de iconos
+  opciones:
+    --version      show program's version number and exit
+    -h, --help     muestra este mensaje de ayuda
+    -t segundos    tiempo en segundos entre cada notificación
+    -m archivo     ubicación y nombre del archivo de mensajes formato csv
+    -g directorio  ubicación y nombre de la carpeta de iconos
+```
 
+Información
+-----------
 
-Compatibilidad
---------------
-Probado en distribuciones con entorno Gnome 3
- * Debian Wheezy
- * Caribay 4.0 
- * Canaima 4.x
- * Ubuntu 14.04*
+* **Proyecto bicentenario:** http://bicentenario.cenditel.gob.ve
+* **Repositorio:** http://github.com/davidhdz/notibi
+* **Repositorio institucional:** https://canaima.cenditel.gob.ve/trac/browser/bicentenario/notificaciones
 
-*Nota: Ubuntu 14.04 despliega los mensajes, pero como el entorno no cuenta con área de notificación, los mensajes no se almacenan en ésta como en otras distribuciones que usan Gnome 3.
-
-
-Descargas
----------
-Versión 0.1 para Debian y derivados: [notibi_0.1_all.deb](http://fsl.cenditel.gob.ve/frs/download.php/467/notibi_0.1_all.deb)
 
 Capturas
 --------
@@ -61,11 +56,3 @@ Capturas
 **Detalle**
 ![Detalle](screenshots/3.png "Detalle")
 <br/>
-
-
-Información
------------
-**Proyecto bicentenario**: http://bicentenario.cenditel.gob.ve<br>
-**Repositorio**: http://github.com/davidhdz/notibi<br>
-**Repositorio institucional**: http://fsl.cenditel.gob.ve/frs/?group_id=73&release_id=246
-

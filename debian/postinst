@@ -26,4 +26,5 @@ PKG=notibi
         done
     fi
        
+#DEBHELPER#
 exit 0
