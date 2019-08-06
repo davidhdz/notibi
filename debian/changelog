@@ -1,3 +1,21 @@
+notibi (0.4) unstable; urgency=low
+
+  * Se agrega mensajes correspondientes a 1815 y 11 iconos adicionales.
+
+ -- David Hernández <david.vzla@gmail.com>  Fri, 05 Jun 2015 09:58:11 -0430
+
+notibi (0.3) unstable; urgency=low
+
+  * Nuevos mensajes de 1811 y 1812
+
+ -- David Hernández <david.vzla@gmail.com>  Wed, 26 Nov 2014 17:54:18 -0430
+
+notibi (0.2) unstable; urgency=low
+
+  * Nuevos mensajes de 1810
+
+ -- David Hernández <david.vzla@gmail.com>  Wed, 26 Nov 2014 11:38:20 -0430
+
 notibi (0.1) unstable; urgency=low
 
   * Initial release

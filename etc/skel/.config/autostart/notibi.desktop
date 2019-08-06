@@ -7,6 +7,6 @@ Name=Notificaciones Bicentenarias
 Comment=Notificaciones Bicentenarias
 Terminal=false
 Type=Application
-Version=0.1
+Version=0.4
 X-GNOME-Autostart-enabled=true
 X-KDE-autostart-after=panel

@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: UTF-8 -*-
 
-# Copyright 2014 David Hernández
+# Copyright 2015 David Hernández
 #
 # NotiBi
 # 
@@ -37,8 +37,10 @@ dir_icos: Ubicación del directorio de iconos
 tiempo:   Segundos que transcurren entre cada notificación
 """
 
-nombre_a = os.path.join(os.path.abspath(os.path.dirname(sys.argv[0])),'/usr/share/notibi/data/citas.csv')
-dir_icos = os.path.join(os.path.dirname(os.path.abspath(__file__)), '/usr/share/notibi/iconos/')
+nombre_a = os.path.join(os.path.abspath(os.path.dirname(sys.argv[0])),
+    '/usr/share/notibi/data/citas.csv')
+dir_icos = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+    '/usr/share/notibi/iconos/')
 tiempo = 9000  # 9000 segundos = 2.5 horas
 ####################################################################
 
@@ -54,15 +56,14 @@ def notify(titulo, msg, icono):
 
 
 def main():
-
     global tiempo
     global nombre_a
     global dir_icos
 
     parser = optparse.OptionParser(
         usage='Usage: %prog [-t segundos] [-m /ruta/archivo.csv] '
-        '[-g /ruta/directorio_iconos]', version='%prog Version 0.1 by '
-        'David Hernandez 2014', add_help_option=False)
+        '[-g /ruta/directorio_iconos]', version='%prog Version 0.4 by '
+        'David Hernandez 2015', add_help_option=False)
 
     parser.add_option('-h', '--help', help='muestra este mensaje de ayuda',
                        dest='ayuda', action='store_true')
